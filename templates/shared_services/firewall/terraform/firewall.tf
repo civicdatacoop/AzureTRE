@@ -72,7 +72,7 @@ resource "azurerm_firewall_application_rule_collection" "shared_subnet" {
   name                = "arc-shared_subnet"
   azure_firewall_name = azurerm_firewall.fw.name
   resource_group_name = azurerm_firewall.fw.resource_group_name
-  priority            = 100
+  priority            = 110
   action              = "Allow"
 
   rule {
@@ -137,7 +137,7 @@ resource "azurerm_firewall_application_rule_collection" "resource_processor_subn
   name                = "arc-resource_processor_subnet"
   azure_firewall_name = azurerm_firewall.fw.name
   resource_group_name = azurerm_firewall.fw.resource_group_name
-  priority            = 101
+  priority            = 111
   action              = "Allow"
 
   rule {
@@ -210,7 +210,7 @@ resource "azurerm_firewall_network_rule_collection" "general" {
   name                = "general"
   azure_firewall_name = azurerm_firewall.fw.name
   resource_group_name = azurerm_firewall.fw.resource_group_name
-  priority            = 100
+  priority            = 110
   action              = "Allow"
 
   rule {
@@ -241,7 +241,7 @@ resource "azurerm_firewall_network_rule_collection" "resource_processor_subnet" 
   name                = "nrc-resource_processor_subnet"
   azure_firewall_name = azurerm_firewall.fw.name
   resource_group_name = azurerm_firewall.fw.resource_group_name
-  priority            = 101
+  priority            = 111
   action              = "Allow"
 
   rule {
@@ -274,7 +274,7 @@ resource "azurerm_firewall_network_rule_collection" "web_app_subnet" {
   name                = "nrc-web_app_subnet"
   azure_firewall_name = azurerm_firewall.fw.name
   resource_group_name = azurerm_firewall.fw.resource_group_name
-  priority            = 102
+  priority            = 112
   action              = "Allow"
 
   rule {
@@ -305,7 +305,7 @@ resource "azurerm_firewall_application_rule_collection" "web_app_subnet" {
   name                = "arc-web_app_subnet"
   azure_firewall_name = azurerm_firewall.fw.name
   resource_group_name = azurerm_firewall.fw.resource_group_name
-  priority            = 102
+  priority            = 112
   action              = "Allow"
 
   rule {
